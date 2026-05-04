@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For You</title>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, #fcefee, #e0f7fa, #f3e5f5, #e8f5e9);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+
+  .card {
+    background: rgba(255,255,255,0.9);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 420px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    backdrop-filter: blur(10px);
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,100% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
+  }
+
+  h1 {
+    margin-bottom: 10px;
+    animation: blink 2s infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% {opacity: 1;}
+    50% {opacity: 0.6;}
+  }
+
+  p {
+    color: #555;
+    line-height: 1.6;
+  }
+
+  button {
+    margin-top: 15px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #6c63ff;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+    background: #574fd6;
+  }
+
+  .hidden {
+    display: none;
+    margin-top: 15px;
+    animation: fadeIn 1s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  .emoji {
+    font-size: 24px;
+    animation: spin 4s linear infinite;
+    display: inline-block;
+  }
+
+  @keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>happy birthday yevvvvv🎂!!</h1>
+
+  <p>
+    i hope this year feels a little lighter for you.<br>
+    just take everything slowly, no pressure. cuma tu la AHAHAHA DAH TAMBAH STAUN TUA 
+  </p>
+
+  <button onclick="reveal()">don’t click 👀</button>
+
+  <p id="extra1" class="hidden">
+    okay degil ek still clicked it anyway 😭
+  </p>
+
+  <p id="extra2" class="hidden">
+    just know i’m ur friend n still here, always.
+  </p>
+
+  <p id="extra3" class="hidden">
+    maybe someday, we’ll meet again in a better place :)
+  </p>
+
+  <p id="extra4" class="hidden">
+    and always remember that "KAU HENSEM DHO AHAHAHAH"
+  </p>
+
+  <div id="emoji" class="hidden emoji">🎈</div>
+</div>
+
+<script>
+function reveal() {
+  document.getElementById("extra1").style.display = "block";
+
+  setTimeout(() => {
+    document.getElementById("extra2").style.display = "block";
+  }, 1000);
+
+  setTimeout(() => {
+    document.getElementById("extra3").style.display = "block";
+    document.getElementById("extra4").style.display = "block";
+    document.getElementById("emoji").style.display = "block";
+  }, 2000);
+}
+</script>
+
+</body>
+</html>
